@@ -3,10 +3,11 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 
 from ..models import Product
+from ..views import NB_DISPLAYED_PRODUCTS
 
 
 class TestSearchProduct(TestCase):
-    fixtures = ['products']
+    fixtures = ['19products']
 
     # test search a product by name
     def test_find_a_product(self):
@@ -24,18 +25,18 @@ class TestSearchProduct(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(
             len(response.context["products"]),
-            len(Product.objects.all()))
+            min(len(Product.objects.all()), NB_DISPLAYED_PRODUCTS))
 
     # test if the founded substitut has a better nutriscore
     def test_find_a_substitut(self):
-        product = Product.objects.order_by('-nutriscore')[0]
+        product = Product.objects.all()[0]
         response = self.client.get(
             f"{reverse('substitut:find')}?product_id={product.pk}")
         self.assertLess(
             response.context['products'][0].nutriscore, product.nutriscore)
 
 class TestProductPage(TestCase):
-    fixtures = ['products']
+    fixtures = ['2products']
 
     # test product page contains the required informations
     def test_product_page(self):
@@ -51,7 +52,7 @@ class TestProductPage(TestCase):
 
 
 class TestFavories(TestCase):
-    fixtures = ['products']
+    fixtures = ['2products']
 
     @classmethod
     def setUpClass(cls):

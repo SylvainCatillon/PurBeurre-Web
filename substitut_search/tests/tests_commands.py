@@ -49,7 +49,7 @@ class TestFillDB(TestCase):
         self.assertGreater(Product.objects.count(), 200)
 
 class TestUpdateDB(TestCase):
-    fixtures = ['products']
+    fixtures = ['2products']
     MOCK_PRODUCTS = [
         {
             "code": "246825",

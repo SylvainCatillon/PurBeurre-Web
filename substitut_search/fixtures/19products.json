@@ -1,0 +1,230 @@
+[
+{
+    "model": "substitut_search.product",
+    "pk": "87333831",
+    "fields": {
+        "nutriscore": "a",
+        "categories": "[\"en:beverages\", \"en:waters\", \"en:spring-waters\", \"en:mineral-waters\", \"en:natural-mineral-waters\"]",
+        "name": "Eau min\u00e9ral",
+        "image": "https://static.openfoodfacts.org/images/products/87333831/front_fr.13.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/87333831/eau-mineral-bar-le-duc",
+        "nutrient_levels": "[]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "0645860003992",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:cookies\"]",
+        "name": "Britt Cookies Guava",
+        "image": "https://static.openfoodfacts.org/images/products/064/586/000/3992/front_fr.3.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/0645860003992/britt-cookies-guava",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (15g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (5g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (40g)\", \"Sel en quantit\\u00e9e faible (0.2g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "20557416",
+    "fields": {
+        "nutriscore": "c",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Galletas espelta bio organic miel",
+        "image": "https://static.openfoodfacts.org/images/products/20557416/front_de.3.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/20557416/galletas-espelta-bio-organic-miel-sondey",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (18.3g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (3.3g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (20.4g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.43g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3017760803991",
+    "fields": {
+        "nutriscore": "c",
+        "categories": "[\"en:snacks\", \"en:breakfasts\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Belvita petit d\u00e9jeuner original gout chocolat noisette",
+        "image": "https://static.openfoodfacts.org/images/products/301/776/080/3991/front_fr.62.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3017760803991/belvita-petit-dejeuner-original-gout-chocolat-noisette-lu",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (15g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (1.8g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (26g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.89g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3045470023446",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:cookies\"]",
+        "name": "Cookies coeur tendre",
+        "image": "https://static.openfoodfacts.org/images/products/304/547/002/3446/front_fr.3.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3045470023446/cookies-coeur-tendre",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (28g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (16g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (33g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (1.1g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3116430057938",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:chocolate-biscuits\"]",
+        "name": "Namur",
+        "image": "https://static.openfoodfacts.org/images/products/311/643/005/7938/front_fr.39.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3116430057938/namur-delacre",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (24.6g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (14.4g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (40g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.42g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3260260050314",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"fr:assortiments-de-biscuits\"]",
+        "name": "Galettes, palets, cigarettes",
+        "image": "https://static.openfoodfacts.org/images/products/326/026/005/0314/front_fr.10.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3260260050314/galettes-palets-cigarettes-la-trinitaine",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (19g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (13g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (28g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.7g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3478660050500",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:filled-biscuits\", \"en:shortbread-cookies\", \"en:dry-biscuits\"]",
+        "name": "Sabl\u00e9 Fourr\u00e9 \u00e0 la Praline",
+        "image": "https://static.openfoodfacts.org/images/products/347/866/005/0500/front_fr.4.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3478660050500/sable-fourre-a-la-praline-gateau-dauphinois",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (13.6g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (8g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (30.8g)\", \"Sel en quantit\\u00e9e faible (0.0064g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3535800720805",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:shortbread-cookies\"]",
+        "name": "Sabl\u00e9s Rhum Raisins",
+        "image": "https://static.openfoodfacts.org/images/products/353/580/072/0805/front_fr.13.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3535800720805/sables-rhum-raisins-loc-maria-biscuits",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (24g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (15g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (26g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.7g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "3760005022267",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Matins Bio 4 c\u00e9r\u00e9ales",
+        "image": "https://static.openfoodfacts.org/images/products/376/000/502/2267/front_fr.4.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/3760005022267/matins-bio-4-cereales-bisson",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (22.3g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (9.2g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (14.6g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.4g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "4056489040798",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Biscuits germes bl\u00e9 p\u00e9pites chocolat",
+        "image": "https://static.openfoodfacts.org/images/products/405/648/904/0798/front_fr.3.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/4056489040798/biscuits-germes-ble-pepites-chocolat-sondey",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (16.2g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (3g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (23g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.65g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "5050083174469",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:filled-biscuits\", \"en:strawberry-biscuits\", \"en:toaster-pastries\"]",
+        "name": "Pop Tarts Frosted Strawberry Sensation 8 x",
+        "image": "https://static.openfoodfacts.org/images/products/505/008/317/4469/front_fr.12.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/5050083174469/pop-tarts-frosted-strawberry-sensation-8-x-kellogg-s",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (11g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (5g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (32g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.88g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "5410471909163",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Jules' Tin",
+        "image": "https://static.openfoodfacts.org/images/products/541/047/190/9163/front_fr.4.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/5410471909163/jules-tin-jules-destrooper",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (18g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (11g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (38g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.8g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "5413548040592",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:confectioneries\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:pastries\", \"en:wafers\", \"en:stuffed-wafers\", \"en:waffles\", \"en:stuffed-waffles\"]",
+        "name": "Raffaello",
+        "image": "https://static.openfoodfacts.org/images/products/541/354/804/0592/front_fr.38.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/5413548040592/raffaello-ferrero",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (48.6g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (29.7g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (33.8g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.305g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "7622210707154",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:filled-biscuits\", \"en:chocolate-sandwich-cookies\"]",
+        "name": "Oreo Biscuits cacaot\u00e9s enrob\u00e9s chocolat lait les 2 boites de",
+        "image": "https://static.openfoodfacts.org/images/products/762/221/070/7154/front_fr.4.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/7622210707154/oreo-biscuits-cacaotes-enrobes-chocolat-lait-les-2-boites-de",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (10.5g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (5.9g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (19.5g)\", \"Sel en quantit\\u00e9e faible (0.23g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "8017596071880",
+    "fields": {
+        "nutriscore": "d",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Frollini al cocco",
+        "image": "https://static.openfoodfacts.org/images/products/801/759/607/1880/front_de.4.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/8017596071880/frollini-al-cocco-amo-essere",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (19.6g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (7.5g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (22g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.75g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "8410376015522",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:wafers\"]",
+        "name": "Gullon Gaufrettes Citron 150g",
+        "image": "https://static.openfoodfacts.org/images/products/841/037/601/5522/front_fr.20.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/8410376015522/gullon-gaufrettes-citron-150g",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (21g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (12g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (36g)\", \"Sel en quantit\\u00e9e faible (0.18g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "8410376028423",
+    "fields": {
+        "nutriscore": "e",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\", \"en:filled-biscuits\"]",
+        "name": "Twins",
+        "image": "https://static.openfoodfacts.org/images/products/841/037/602/8423/front_fr.8.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/8410376028423/twins-gullon",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e \\u00e9lev\\u00e9e (28g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (16g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (43g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.5g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": "8410376037845",
+    "fields": {
+        "nutriscore": "b",
+        "categories": "[\"en:snacks\", \"en:sweet-snacks\", \"en:biscuits-and-cakes\", \"en:biscuits\"]",
+        "name": "Gullon Diet Avena Naranja",
+        "image": "https://static.openfoodfacts.org/images/products/841/037/603/7845/front_fr.13.200.jpg",
+        "link": "https://fr.openfoodfacts.org/produit/8410376037845/gullon-diet-avena-naranja",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (15g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e mod\\u00e9r\\u00e9e (1.5g)\", \"Sucres en quantit\\u00e9e faible (0.5g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.75g)\"]"
+    }
+}
+]

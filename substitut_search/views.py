@@ -59,7 +59,9 @@ def find(request):
                           .filter(nutriscore__lt=product.nutriscore) \
                           .order_by('nutriscore')
         #  add the products in the result list, without exceed the max
-        substituts += cat_sbts[:max_sbts-len(substituts)]
+        for sbt in cat_sbts:
+            if len(substituts) < max_sbts and sbt not in substituts:
+                substituts.append(sbt)
         #  if the result list have enough products, end the search
         if len(substituts) >= max_sbts:
             break

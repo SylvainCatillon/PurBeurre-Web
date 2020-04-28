@@ -9,7 +9,7 @@ from accounts.tests.utils import log_user_in
 from ..models import Product
 
 class TestFavoriesSelenium(StaticLiveServerTestCase):
-    fixtures = ['products']
+    fixtures = ['2products']
 
     @classmethod
     def setUpClass(cls):
