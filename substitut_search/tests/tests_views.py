@@ -29,7 +29,7 @@ class TestSearchProduct(TestCase):
 
     # test if the founded substitut has a better nutriscore
     def test_find_a_substitut(self):
-        product = Product.objects.all()[0]
+        product = Product.objects.filter(categories__contains=["en:biscuits"]).filter(nutriscore="c")[0]
         response = self.client.get(
             f"{reverse('substitut:find')}?product_id={product.pk}")
         self.assertLess(
