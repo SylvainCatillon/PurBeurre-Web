@@ -1,0 +1,37 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<section class="page-section bg-dark min-vh-100" id="createAccount">
+<div class="container">
+<div class="row justify-content-center">
+  <div class="col-lg-8 text-center">
+    {% if request.user.is_authenticated %}
+    <div class="h4 text-white mt-5">
+      Vous êtes actuellement connecté sur le compte <i>"{{ request.user.username }}"</i>. Veuillez vous déconnecter pour créer un compte
+    </div>
+    {% else %}
+    <h2 class="text-white mt-4">Créer un compte</h2>
+    <div class="bg-info rounded mt-3 mx-5 py-1">
+      Vous avez déjà un compte? <a href="{% url 'accounts:login' %}">Connexion</a>
+    </div>
+    <hr class="divider light my-4">
+    <form action="{% url 'accounts:create' %}" method="post" id="create_form">
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-group pt-2 pt-lg-4">
+            <div class="bg-danger text-white shadow">{{ field.errors }}</div>
+            <div class="font-bold text-white h5">{{ field.label_tag }}</div>
+            {{ field }}
+            {% if field.help_text %}
+            <div class="font-italic text-light">{{ field.help_text|safe }}</div>
+            {% endif %}
+        </div>
+      {% endfor %}
+      <button type="submit" class="btn btn-success">Créer</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+</div>
+</section>
+{% endblock %}

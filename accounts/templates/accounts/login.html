@@ -1,0 +1,65 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<section class="page-section bg-dark min-vh-100" id="createAccount">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <h2 class="text-white mt-4">Connexion</h2>
+        <hr class="divider light my-4">
+        {% if request.user.is_authenticated %}
+          <div class="h-100 h4 text-white mt-5">
+            Vous êtes actuellement connecté sur le compte <i>"{{ request.user.username }}"</i>.
+          </div>
+        {% else %}
+        {% if form.errors %}
+        {% for error in form.errors.values %}
+            <div class="text-white bg-danger font-italic shadow">{{ error }}</div>
+        {% endfor %}
+        {% endif %}
+        <form method="post" action="{% url 'accounts:login' %}" id="login_form">
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="form-group pt-2 pt-lg-4">
+                <div class="font-bold text-white h5">{{ field.label_tag }}</div>
+                {{ field }}
+                {% if field.help_text %}
+                <div class="font-italic text-light">{{ field.help_text|safe }}</div>
+                {% endif %}
+            </div>
+          {% endfor %}
+          <input type="hidden" name="next" value="{{ next }}">
+          <button type="submit" class="btn btn-success mt-2 mt-lg-4">Connexion</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- {% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if request.user.is_authenticated %}
+<p>Vous êtes déjà connécté</p>
+{% else %}
+<form method="post" action="{% url 'accounts:login' %}" id="login_form">
+{% csrf_token %}
+<table>
+<tr>
+    <td>{{ form.username.label_tag }}</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>{{ form.password.label_tag }}</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+
+<input type="submit" value="login">
+<input type="hidden" name="next" value="{{ next }}">
+</form>
+{% endif %}
+
+ -->
+{% endblock %}

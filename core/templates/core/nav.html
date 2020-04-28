@@ -1,0 +1,30 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="{% url 'index' %}">
+        <img class="ml-auto mr-2" src="{% static 'core/img/logo_pur_beurre.png' %}" width="50" height="40" alt="Site logo">Pur Beurre</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <form class="form-inline" action="{% url 'substitut:search' %}" method="get" accept-charset="utf-8">
+              <div class="form-group">
+                <input id="searchForm" class="form-control form-control-sm" name="query" placeholder="Chercher" style="background: silver;">
+              </div>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="{% url user_url %}" title="{{ user_title }}"><i class="fas fa-user"><div class="ml-3 d-inline d-lg-none">{{ user_title }}</div></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" title="Mes aliments" href="{% url 'substitut:favories' %}"><i class="fas fa-carrot"></i><div class="ml-3 d-inline d-lg-none">Mes aliments</div></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger"href="{% url log_url %}" title="{{ log_title }}"><i class="fas {{ log_icone }}"></i><div class="ml-3 d-inline d-lg-none">{{ log_title }}</div></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

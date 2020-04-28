@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="page-section bg-secondary min-vh-100" id="myAccount">
+    {% static 'accounts/img/my_account_banner.jpg' as banner_image %}
+    {% include 'accounts/user_banner.html' with image=banner_image %}
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <p class="border-dark rounded text-white bg-primary h5 m-5 p-3">Ton adresse mail: {{ request.user.email }}</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

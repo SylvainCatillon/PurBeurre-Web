@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<section class="page-section bg-primary min-vh-100" id="find">
+  {% include 'substitut_search/product_banner.html' with image=initial_product.image title=initial_product.name %}
+  {% include 'substitut_search/products_display.html' with title='Vous pouvez remplacer cet aliment par:' button_title='Voir le produit' action='substitut:detail' save=True %}
+</section>
+{% endblock %}
+
+{% block js %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(function() {
+
+      $(".save_form").on("submit", function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        var $form = $( this ),
+          data = $form.serialize(),
+          url = $form.attr("action");
+
+        var posting = $.post(url, data);
+
+        posting.done(function(msg) {
+            $form.replaceWith('<p class="mt-2">' + msg + '</p>')
+        });
+      });
+    });
+  </script>
+{% endblock %}

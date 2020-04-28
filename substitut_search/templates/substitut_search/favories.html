@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- include user_banner -->
+<section class="page-section bg-primary min-vh-100" id="find">
+  {% static 'substitut_search/img/favories_banner.jpg' as banner_image %}
+  {% include 'accounts/user_banner.html' with image=banner_image %}
+  {% include 'substitut_search/products_display.html' with title='Voici vos produits enregistrés:' button_title='Voir le produit' action='substitut:detail' save=False %}
+</section>
+{% endblock %}

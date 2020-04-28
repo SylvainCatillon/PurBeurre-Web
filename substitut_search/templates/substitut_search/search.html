@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="page-section bg-primary min-vh-100" id="search">
+  {% static 'substitut_search/img/search_banner.jpg' as banner_image %}
+  {% include 'substitut_search/product_banner.html' with image=banner_image title=query %}
+  {% include 'substitut_search/products_display.html' with title='Sélectionnez un aliment à remplacer:' button_title='Choisir' action='substitut:find' save=False %}
+</section>
+{% endblock %}

@@ -1,0 +1,40 @@
+// Variables
+
+// Set custom colors
+$rooibos: #c45525;
+$moules: #345a61;
+$rigolo: #86ebe6;
+$caramel: #de9440;
+$biscuit: #e8a75d;
+
+// Color overrides
+$blue:    $moules !default;
+$orange:  $rooibos !default;
+$cyan:    $rigolo !default;
+
+// Set primary color to orange
+$primary: $orange !default;
+
+// Set secondary color to caramel
+$secondary: $caramel !default;
+
+// Set info color to cyan
+$info: $cyan !default;
+
+// Set light color to biscuit
+$light: $biscuit !default;
+
+// Set dark color to blue
+$dark: $blue !default;
+
+// Font overrides
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-family-serif: "Scope One", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-family-base: $font-family-serif !default;
+
+$headings-font-family: $font-family-sans-serif !default;
+
+// Custom variables
+$navbar-height: 72px;

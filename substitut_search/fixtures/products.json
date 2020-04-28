@@ -1,0 +1,27 @@
+[
+{
+    "model": "substitut_search.product",
+    "pk": 1,
+    "fields": {
+        "code": "246825",
+        "nutriscore": "a",
+        "categories": "[\"en:test\"]",
+        "name": "test1",
+        "image": "https://test.org/images/products/test1.jpg",
+        "link": "https://test.org/produit/test1",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e faible (0g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e faible (0g)\", \"Sucres en quantit\\u00e9e faible (0g)\", \"Sel en quantit\\u00e9e faible (0.02794g)\"]"
+    }
+},
+{
+    "model": "substitut_search.product",
+    "pk": 2,
+    "fields": {
+        "code": "459562",
+        "nutriscore": "d",
+        "categories": "[\"en:test\"]",
+        "name": "test2",
+        "image": "https://test.org/images/products/test2.jpg",
+        "link": "https://test.org/produit/test2",
+        "nutrient_levels": "[\"Mati\\u00e8res grasses en quantit\\u00e9e mod\\u00e9r\\u00e9e (17g)\", \"Acides gras satur\\u00e9s en quantit\\u00e9e \\u00e9lev\\u00e9e (5.6g)\", \"Sucres en quantit\\u00e9e \\u00e9lev\\u00e9e (32g)\", \"Sel en quantit\\u00e9e mod\\u00e9r\\u00e9e (0.58g)\"]"
+    }
+}]
