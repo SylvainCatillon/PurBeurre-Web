@@ -27,13 +27,21 @@ class TestSearchProduct(TestCase):
             len(response.context["products"]),
             min(len(Product.objects.all()), NB_DISPLAYED_PRODUCTS))
 
-    # test if the founded substitut has a better nutriscore
+    # test if the substituts have a better nutriscore and share a category
     def test_find_a_substitut(self):
-        product = Product.objects.all()[0]
+        product = Product.objects \
+                        .filter(categories__contains=["en:biscuits"]) \
+                        .filter(nutriscore="d")[0]
         response = self.client.get(
             f"{reverse('substitut:find')}?product_id={product.pk}")
-        self.assertLess(
-            response.context['products'][0].nutriscore, product.nutriscore)
+        for substitut in response.context['products']:
+            self.assertLess(substitut.nutriscore, product.nutriscore)
+            for category in substitut.categories:
+                if category in product.categories:
+                    break
+            else:
+                self.fail("A substitut doesn't share any"
+                          " category with the initial product")
 
 class TestProductPage(TestCase):
     fixtures = ['2products']
