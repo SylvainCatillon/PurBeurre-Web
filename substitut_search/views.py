@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseForbidden
+from django.http import HttpResponse
 
-from .models import Product
+from .models import Product, Favory
 
 NB_DISPLAYED_PRODUCTS = 12
 
@@ -65,9 +65,17 @@ def find(request):
         #  if the result list have enough products, end the search
         if len(substituts) >= max_sbts:
             break
+    fav_tags = ["Non classé"]
+    user = request.user
+    if user.is_authenticated:
+        for fav in Favory.objects.filter(user_profile=user.profile):
+            tag = fav.tag
+            if tag not in fav_tags:
+                fav_tags.append(tag)
     context = {
         "initial_product": product,
-        "products": substituts
+        "products": substituts,
+        "fav_tags": sorted(fav_tags)
         }
     return render(request, "substitut_search/find.html", context)
 
@@ -99,8 +107,12 @@ def favories(request):
     #  if the request method is POST, save the product in the user favories
     if request.method == "POST":
         product_pk = request.POST.get('product_id')
+        tag = request.POST.get('fav_tag')
         product = get_object_or_404(Product, pk=product_pk)
-        user.profile.favories.add(product)
+        fav_args = {"user_profile":user.profile, "product":product}
+        if tag:
+            fav_args['tag'] = tag
+        Favory.objects.create(**fav_args)
         #  return an HttpResponse which will be displayed by a jquerry script
         return HttpResponse("Produit sauvegardé")
     #  if the method isn't POST, display the saved products of the user

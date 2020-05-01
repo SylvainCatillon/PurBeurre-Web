@@ -1,7 +1,7 @@
 from django.test import TestCase
 
-from ..models import Product, Favory
 from accounts.tests.tests_models import create_user
+from ..models import Product, Favory
 
 
 def create_product():
@@ -32,10 +32,22 @@ class ModelsCreation(TestCase):
         self.assertEqual(product.__str__(), product.name)
 
     def test_favory_creation(self):
-        """Test if a favory is created, with 'Divers' as tag"""
+        """Test if a favory is created, with the default tag"""
         product = create_product()
         user = create_user()
         user.profile.favories.add(product)
         favory = Favory.objects.get(user_profile=user.profile)
         self.assertIsInstance(favory, Favory)
         self.assertEqual(favory.tag, "Non classé")
+
+    def test_favory_creation_with_tag(self):
+        """Test if a favory is created, with a choosen tag"""
+        product = create_product()
+        user = create_user()
+        favory = Favory.objects.create(
+            user_profile=user.profile,
+            product=product,
+            tag="Test")
+        self.assertIsInstance(favory, Favory)
+        self.assertEqual(favory.tag, "Test")
+        self.assertIn(product, user.profile.favories.all())

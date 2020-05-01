@@ -22,7 +22,8 @@
         var posting = $.post(url, data);
 
         posting.done(function(msg) {
-            $form.replaceWith('<p class="mt-2">' + msg + '</p>')
+            $form.parent().replaceWith('<p class="mt-2">' + msg + '</p>')
+            $("#tags").load(location.href + " #tags");
         });
       });
     });

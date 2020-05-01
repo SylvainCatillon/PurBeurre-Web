@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth.models import User
 
-from ..models import Product
+from ..models import Product, Favory
 from ..views import NB_DISPLAYED_PRODUCTS
 
 
@@ -79,11 +79,39 @@ class TestFavories(TestCase):
 
     # test a favory is saved
     def test_save_favory(self):
-        product_pk = self.product.pk
         response = self.client.post(
-            reverse("substitut:favories"), {"product_id": product_pk})
+            reverse("substitut:favories"), {"product_id": self.product.pk})
         self.assertEqual(response.status_code, 200)
         self.assertIn(self.product, self.user.profile.favories.all())
+
+    # test a favory is saved with the good tag
+    def test_save_favory_with_tag(self):
+        tag = "Test"
+        response = self.client.post(
+            reverse("substitut:favories"),
+            {"product_id": self.product.pk, "fav_tag": tag})
+        self.assertEqual(response.status_code, 200)
+        favory = Favory.objects.get(user_profile=self.user.profile)
+        self.assertEqual(favory.product, self.product)
+        self.assertEqual(favory.tag, tag)
+
+    def test_default_tag_in_find_context(self):
+        response = self.client.get(
+            f"{reverse('substitut:find')}?product_id={self.product.pk}")
+        self.assertEqual(
+            response.context["fav_tags"],
+            ["Non classé"])
+
+    def test_tags_in_find_context(self):
+        Favory.objects.create(
+            user_profile=self.user.profile,
+            product=self.product,
+            tag="A Test")
+        response = self.client.get(
+            f"{reverse('substitut:find')}?product_id={self.product.pk}")
+        self.assertEqual(
+            response.context["fav_tags"],
+            ["A Test", "Non classé"])
 
     # test a user can see his favories
     def test_see_favories(self):
