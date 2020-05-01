@@ -43,6 +43,7 @@ class TestSearchProduct(TestCase):
                 self.fail("A substitut doesn't share any"
                           " category with the initial product")
 
+
 class TestProductPage(TestCase):
     fixtures = ['2products']
 
@@ -115,10 +116,18 @@ class TestFavories(TestCase):
 
     # test a user can see his favories
     def test_see_favories(self):
-        self.user.profile.favories.add(self.product)
+        Favory.objects.create(
+            user_profile=self.user.profile,
+            product=self.product,
+            tag="Test")
+        product2 = Product.objects.all()[1]
+        Favory.objects.create(
+            user_profile=self.user.profile,
+            product=product2,
+            tag="Test")
         response = self.client.get(reverse("substitut:favories"))
-        self.assertEqual(response.status_code, 200)
-        self.assertContains(response, self.product.name)
+        self.assertEqual(
+            response.context['fav_dict']['Test'], [self.product, product2])
 
     # test an unlogged user can't see his favories
     def test_see_favories_unlogged_user(self):

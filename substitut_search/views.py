@@ -89,7 +89,8 @@ def detail(request):
     """
     product_pk = request.GET.get("product_id")
     product = get_object_or_404(Product, pk=product_pk)
-    return render(request, "substitut_search/detail.html", {"product": product})
+    return render(
+        request, "substitut_search/detail.html", {"product": product})
 
 def favories(request):
     """
@@ -107,15 +108,22 @@ def favories(request):
     #  if the request method is POST, save the product in the user favories
     if request.method == "POST":
         product_pk = request.POST.get('product_id')
-        tag = request.POST.get('fav_tag')
         product = get_object_or_404(Product, pk=product_pk)
-        fav_args = {"user_profile":user.profile, "product":product}
+        fav_args = {"user_profile": user.profile, "product": product}
+        tag = request.POST.get('fav_tag')
         if tag:
             fav_args['tag'] = tag
         Favory.objects.create(**fav_args)
         #  return an HttpResponse which will be displayed by a jquerry script
         return HttpResponse("Produit sauvegardé")
-    #  if the method isn't POST, display the saved products of the user
-    products = user.profile.favories.all()
+    fav_dict = {"Non classé": []}
+    for favory in Favory.objects \
+                        .filter(user_profile=user.profile) \
+                        .order_by('tag'):
+        tag = favory.tag
+        if tag in fav_dict.keys():
+            fav_dict[tag].append(favory.product)
+        else:
+            fav_dict[tag] = [favory.product]
     return render(
-        request, "substitut_search/favories.html", {'products': products})
+        request, "substitut_search/favories.html", {'fav_dict': fav_dict})
