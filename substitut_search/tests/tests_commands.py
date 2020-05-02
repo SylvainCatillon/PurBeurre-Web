@@ -74,7 +74,9 @@ class TestUpdateDB(TestCase):
 
     #test product updated
     def test_update_product(self):
-        self.assertQuerysetEqual(list(Product.objects.all()), ['<Product: test1>','<Product: test2>'])
+        self.assertQuerysetEqual(
+            list(Product.objects.all()),
+            ['<Product: test1>', '<Product: test2>'])
         fill_db = FillDB()
         fill_db.dl_products = Mock(return_value=self.MOCK_PRODUCTS)
         fill_db.update_products()

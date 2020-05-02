@@ -2,3 +2,6 @@ PurBeurre_WebApp/settings/production.py
 __pycache__
 PurBeurre_WebApp/staticfiles/
 geckodriver.log
+
+.coverage
+htmlcov/

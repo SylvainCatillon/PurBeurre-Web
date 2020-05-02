@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+
 class Product(models.Model):
     """A product downloaded from OpenFoodFacts"""
     code = models.CharField(max_length=50, primary_key=True)
@@ -16,12 +17,14 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+
 class Favory(models.Model):
     """Relation table between Product and User"""
     user_profile = models.ForeignKey(
         'accounts.Profile', on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     saved_at = models.DateTimeField(auto_now_add=True)
+    tag = models.CharField(max_length=200, default="Non classé")
 
     def __str__(self):
         return self.product.name

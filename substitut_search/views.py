@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponse, HttpResponseForbidden
+from django.http import HttpResponse
 
-from .models import Product
+from .models import Product, Favory
 
 NB_DISPLAYED_PRODUCTS = 12
 
@@ -65,9 +65,17 @@ def find(request):
         #  if the result list have enough products, end the search
         if len(substituts) >= max_sbts:
             break
+    fav_tags = ["Non classé"]
+    user = request.user
+    if user.is_authenticated:
+        for fav in Favory.objects.filter(user_profile=user.profile):
+            tag = fav.tag
+            if tag not in fav_tags:
+                fav_tags.append(tag)
     context = {
         "initial_product": product,
-        "products": substituts
+        "products": substituts,
+        "fav_tags": sorted(fav_tags)
         }
     return render(request, "substitut_search/find.html", context)
 
@@ -81,7 +89,8 @@ def detail(request):
     """
     product_pk = request.GET.get("product_id")
     product = get_object_or_404(Product, pk=product_pk)
-    return render(request, "substitut_search/detail.html", {"product": product})
+    return render(
+        request, "substitut_search/detail.html", {"product": product})
 
 def favories(request):
     """
@@ -100,10 +109,22 @@ def favories(request):
     if request.method == "POST":
         product_pk = request.POST.get('product_id')
         product = get_object_or_404(Product, pk=product_pk)
-        user.profile.favories.add(product)
+        fav_args = {"user_profile": user.profile, "product": product}
+        tag = request.POST.get('fav_tag')
+        if tag:
+            fav_args['tag'] = tag
+        Favory.objects.create(**fav_args)
         #  return an HttpResponse which will be displayed by a jquerry script
         return HttpResponse("Produit sauvegardé")
-    #  if the method isn't POST, display the saved products of the user
-    products = user.profile.favories.all()
+    #  if the request method isn't POST, display the saved products of the user
+    fav_dict = {"Non classé": []}
+    for favory in Favory.objects \
+                        .filter(user_profile=user.profile) \
+                        .order_by('tag', '-saved_at'):
+        tag = favory.tag
+        if tag in fav_dict.keys():
+            fav_dict[tag].append(favory.product)
+        else:
+            fav_dict[tag] = [favory.product]
     return render(
-        request, "substitut_search/favories.html", {'products': products})
+        request, "substitut_search/favories.html", {'fav_dict': fav_dict})

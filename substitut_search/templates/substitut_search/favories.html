@@ -6,6 +6,32 @@
 <section class="page-section bg-primary min-vh-100" id="find">
   {% static 'substitut_search/img/favories_banner.jpg' as banner_image %}
   {% include 'accounts/user_banner.html' with image=banner_image %}
-  {% include 'substitut_search/products_display.html' with title='Voici vos produits enregistrés:' button_title='Voir le produit' action='substitut:detail' save=False %}
+  <div class="container text-center">
+  <div class="btn-group mx-auto mb-3" role="group" aria-label="Basic example">
+    {% for tag in fav_dict %}
+    <button type="button" class="btn btn-dark tag_button" value="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
+  </div>
+  {% for tag, products in fav_dict.items %}
+  <div class="tag_div" id="{{ tag }}" style="display: none">
+    {% include 'substitut_search/products_display.html' with title=tag button_title='Voir le produit' action='substitut:detail' save=False %}
+  </div>
+  {% endfor %}
 </section>
+{% endblock %}
+
+{% block js %}
+  {{ block.super }}
+  <script type="text/javascript">
+    $(function() {
+
+      $("div[id='Non classé']").show()
+
+      $(".tag_button").on("click", function(event) {
+        $(".tag_div").hide()
+        $("div[id='"+$( this ).text()+"']").show()
+      })
+    });
+  </script>
 {% endblock %}

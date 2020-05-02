@@ -18,19 +18,28 @@
           {% if product in user.profile.favories.all %}
           <p class="mt-2">Produit déjà sauvegardé</p>
           {% else %}
-          <form class="save_form form-inline" action="{% url 'substitut:favories' %}">
-            {% csrf_token %}
-            <input type="hidden" class="hidden" value="{{ product.pk }}" name="product_id">
-            <button type="submit" class="btn btn-primary mt-3"{% if not user.is_authenticated %} title="Veuillez vous connecter pour sauvegarder vos produits" disabled {% endif %}><i class="fas fa-save mr-3"></i>Sauvegarder</button>
-          </form>
+          <div class="save_container">
+            <button class="btn btn-primary mt-3 dropdown-toggle dropdownButton" id="dropdownButton" data-toggle="dropdown" aria-hashpopup="true" aria-expanded="false" {% if not user.is_authenticated %} title="Veuillez vous connecter pour sauvegarder vos produits" disabled {% endif %}><i class="fas fa-save mr-3"></i>Sauvegarder</button>
+            <form class="save_form dropdown-menu p-4" aria-labelledby="dropdownButton" action="{% url 'substitut:favories' %}">
+              {% csrf_token %}
+              <input type="hidden" class="hidden" value="{{ product.pk }}" name="product_id">
+              <p>Choisissez ou créez une catégorie</p>
+              <input type="text" list="tags" name="fav_tag" placeholder="Non classé">
+              <button type="submit" class="btn btn-primary mt-3 save_submit"></i>Sauvegarder dans cette liste</button>
+            </form>
+          </div>
           {% endif %}
         {% endif %}
       </div>
     </div>
   </div>
-  <!-- {% if forloop.counter|divisibleby:3 %}<div class="clearfix"></div>{% endif %} -->
   {% empty %}
-  <div>Pas de produits trouvés</div>
+  <p class="col-12 text-center rounded bg-light py-3 font-weight-bold">Désolé, nous n'avons trouvé aucun produit ici</p>
   {% endfor %}
+  <datalist id="tags">
+  {% for tag in fav_tags %}
+  <option>{{ tag }}</option>
+  {% endfor %}
+  </datalist>
 </div>
 </div>
