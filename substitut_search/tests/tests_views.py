@@ -127,7 +127,7 @@ class TestFavories(TestCase):
             tag="Test")
         response = self.client.get(reverse("substitut:favories"))
         self.assertEqual(
-            response.context['fav_dict']['Test'], [self.product, product2])
+            response.context['fav_dict']['Test'], [product2, self.product])
 
     # test an unlogged user can't see his favories
     def test_see_favories_unlogged_user(self):

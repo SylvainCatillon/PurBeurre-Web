@@ -116,10 +116,11 @@ def favories(request):
         Favory.objects.create(**fav_args)
         #  return an HttpResponse which will be displayed by a jquerry script
         return HttpResponse("Produit sauvegardé")
+    #  if the request method isn't POST, display the saved products of the user
     fav_dict = {"Non classé": []}
     for favory in Favory.objects \
                         .filter(user_profile=user.profile) \
-                        .order_by('tag'):
+                        .order_by('tag', '-saved_at'):
         tag = favory.tag
         if tag in fav_dict.keys():
             fav_dict[tag].append(favory.product)
